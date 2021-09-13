@@ -15,12 +15,4 @@ export class OrganizationComponent implements OnInit {
     this.navigateAuthenticatedUser();
   }
 
-  navigateAuthenticatedUser() {
-    this.repositoryService.getRepositoryCount().subscribe(countResult => {
-      let repositoryCount = parseInt(countResult.count);
-      if (repositoryCount > 0) { // if repositories are not present then ask user to link repositories
-        this.router.navigateByUrl(`/repositories`);
-      }
-    });
-  }
 }
