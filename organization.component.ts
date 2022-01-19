@@ -33,6 +33,25 @@ export class OrganizationComponent implements OnInit {
   const items = get(parsedArgs);
 
   await generate(items, options);
+    if(abc){
+      if(pqr){
+        if(wqr){
+          if(qqr){
+            if(eqr){
+              if(tqr){
+                if(tqr){
+                    if(fqr){
+                        contue;
+                    }
+                  break;
+                  console.loh('cc');
+                 }
+              }
+            }
+          }  
+        }
+      }
+    }
 }
   
   navigateAuthenticatedUser() {
