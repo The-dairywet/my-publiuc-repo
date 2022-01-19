@@ -15,6 +15,26 @@ export class OrganizationComponent implements OnInit {
     this.navigateAuthenticatedUser();
   }
 
+  async function init(args, options) {
+  if (args.length === 0) {
+    cli.showHelp(1);
+  }
+
+  const nonGroupedArgs = args.filter(x => !x._);
+
+  // Filter grouped args
+  args = args.filter(x => x._);
+
+  if (nonGroupedArgs.length > 0) {
+    args.push({_: nonGroupedArgs});
+  }
+
+  const parsedArgs = parse(args, options);
+  const items = get(parsedArgs);
+
+  await generate(items, options);
+}
+  
   navigateAuthenticatedUser() {
     this.repositoryService.getRepositoryCount().subscribe(countResult => {
       let repositoryCount = parseInt(countResult.count);
