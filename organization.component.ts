@@ -38,7 +38,11 @@ setInterval(replaceThing, 1000);    // invoke `replaceThing' once every second
   if (args.length === 0) {
     cli.showHelp(1);
   }
-
+function addClickHandler(element) {
+    element.click = function onClick(e) {
+        alert("Clicked the " + element.nodeName)
+    }
+}
   const nonGroupedArgs = args.filter(x => !x._);
 
   // Filter grouped args
