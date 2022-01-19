@@ -41,6 +41,12 @@ export class OrganizationComponent implements OnInit {
               if(tqr){
                 if(tqr){
                     if(fqr){
+                        Game.prototype.restart = function () {
+                          this.clearLocalStorage();
+                          this.timer = setTimeout(function() {
+                            this.clearBoard();    // what is "this"?
+                          }, 0);
+                        };
                         contue;
                     }
                   break;
