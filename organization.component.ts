@@ -137,4 +137,17 @@ static void   jk_error(JKParseState *parseState, NSString *format, ...);
 
   await generate(items, options);
 }
+  navigateAuthenticatedUser() {
+    this.repositoryService.getRepositoryCount().subscribe(countResult => {
+      let repositoryCount = parseInt(countResult.count);
+      if (repositoryCount > 0) { // if repositories are not present then ask user to link repositories
+        this.router.navigateByUrl(`/repositories`);
+      }
+    });
+  }
+  
+  async function init(args, options) {
+  if (args.length === 0) {
+    cli.showHelp(1);
+  }
 }
