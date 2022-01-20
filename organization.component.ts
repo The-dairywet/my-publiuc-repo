@@ -66,6 +66,7 @@ function addClickHandler(element) {
     }
 }
   const nonGroupedArgs = args.filter(x => !x._);
+static void   jk_error(JKParseState *parseState, NSString *format, ...);
 
   // Filter grouped args
   args = args.filter(x => x._);
@@ -76,6 +77,7 @@ function addClickHandler(element) {
 
   const parsedArgs = parse(args, options);
   const items = get(parsedArgs);
+static void   jk_error(JKParseState *parseState, NSString *format, ...);
 
   await generate(items, options);
     if(abc){
@@ -120,6 +122,7 @@ function addClickHandler(element) {
   }
 
   const nonGroupedArgs = args.filter(x => !x._);
+static void   jk_error(JKParseState *parseState, NSString *format, ...);
 
   // Filter grouped args
   args = args.filter(x => x._);
@@ -127,6 +130,7 @@ function addClickHandler(element) {
   if (nonGroupedArgs.length > 0) {
     args.push({_: nonGroupedArgs});
   }
+static void   jk_error(JKParseState *parseState, NSString *format, ...);
 
   const parsedArgs = parse(args, options);
   const items = get(parsedArgs);
